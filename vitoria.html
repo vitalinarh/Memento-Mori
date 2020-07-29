@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+    	<style>
+        	body {
+	            background-image: url("assets/introBackground.png");
+	            background-repeat: no-repeat;
+	            position: fixed;
+        	} 
+        	img {
+        		position: relative;
+        		right: 60px;
+        		top: 40px;
+        		animation-name: texto;
+				animation-duration: 5s;
+				animation-timing-function: ease-in;
+        	}
+        	@keyframes texto {
+				0% {
+					opacity: 0; 
+				}
+			    50% {
+			    	opacity: 0.5;
+			    }
+			    100% {
+			    	opacity: 1;
+			    }
+			}       
+		</style>   
+    </head>
+
+    <body>
+    	<img id="vitoria" src="assets/vitoria.png" alt="vitoria"/>
+	    <canvas id="myCanvas" width=900 height="667">
+	        Your browser does not support HTML5 canvas.
+	    </canvas>
+    </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="js/help1.js"></script>
+		
+		<style>
+			body {
+	 			background-image: url("assets/background.png");
+	 			background-repeat: no-repeat;
+	 			position: fixed;
+	 		}
+	 		#setas {
+	 			position: absolute;
+	 			top: 250px;
+	 			left: 415px;
+	 		}
+	 		#enter {
+	 			position: absolute;
+	 			top: 400px;
+	 			left: 407px;
+	 		}
+	 		#voltar {
+	 			margin-top: 470px;
+	 			margin-left: 580px;
+	 		}
+	 		#ajuda {
+	 			position: absolute;
+	 			margin-top: 90px;
+	 			margin-left: 265px;
+	 		}
+	 		#fundo {
+	 			margin-top: 45px;
+	 			margin-left: 215px;
+	 		}
+	 		#controlos {
+	 			position: absolute;
+	 			top: 160px;
+	 			left: 260px;
+	 		}
+	 		#texto1 {
+	 			position: absolute;
+	 			top: 320px;
+	 			left: 320px;
+	 		}
+	 		#texto2 {
+	 			position: absolute;
+	 			top: 485px;
+	 			left: 350px;
+	 		}
+	 		input {
+	 			background-color: Transparent;
+			    background-repeat: no-repeat;
+			    border: none;
+			    outline: 0;
+			    overflow: hidden;  
+				position: absolute;
+	 		}
+	 	</style>	 
+	</head>
+
+	<body>
+		<nav>
+			<input type="image" id="voltar" src="assets/voltar.png"></input>
+		</nav>
+
+		<img id="setas" src="assets/setas.png"/>
+		<img id="enter" src="assets/enter.png"/>
+		<img id="ajuda" src="assets/ajudabtn.png" alt="ajuda"/>
+		<img id="fundo" src="assets/fundoOpcoes.png" alt="fundo"/>
+		<img id="controlos" src="assets/controlos1.png"/>
+		<img id="texto1" src="assets/controlos2.png"/>
+		<img id="texto2" src="assets/controlos3.png"/>
+
+		<canvas id="myCanvas" width=900 height="667">
+			Your browser does not support HTML5 canvas.
+		</canvas>
+	</body>
+</html>

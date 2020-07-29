@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="js/chapter5.js"></script>
+
+		<style>
+			@font-face {
+				font-family: myFirstFont;
+				src: url("assets/font3.ttf");
+			}
+            #skip {
+                position: absolute;
+                top: 10px;
+                left: 800px;
+            }
+			#fala {
+				position: absolute;
+				font-family: myFirstFont;
+				color: white;
+				font-size: 36px;
+				top: 425px;
+				left: 125px;
+				width: 650px;
+			}
+			#box {
+				position: absolute;
+				top: 428px;
+				left: 80px;
+				opacity: 0;
+        		animation-name: fadeIn;
+        		animation-delay: 12s;
+				animation-duration: 2s;
+				animation-timing-function: ease-in;
+				animation-fill-mode: forwards; /*Para manter o estado final da animação (a imagem de fundo opaca)*/
+			}
+			p {
+				position: absolute;
+				font-family: myFirstFont;
+				color: white;
+			}
+            input {
+                background-color: Transparent;
+                background-repeat: no-repeat;
+                border: none;
+                outline: 0;
+                overflow: hidden;  
+                position: absolute;
+            }
+        	#titulo {
+        		position: absolute;
+        		top: 30px;
+        		left: 170px;
+				font-size: 140px;
+        		opacity: 0;
+        		animation-name: fadeIn;
+				animation-duration: 6s;
+				animation-timing-function: ease-in;
+  				animation-direction: alternate;
+  				animation-iteration-count: 2;
+        	}
+        	#subtitulo {
+        		position: absolute;
+        		color: LightCoral;
+        		top: 260px;
+        		left: 350px;
+				font-size: 60px;
+        		opacity: 0;
+        		animation-name: fadeIn;
+        		animation-delay: 3s;
+				animation-duration: 4s;
+				animation-timing-function: ease-in;
+  				animation-direction: alternate;
+  				animation-iteration-count: 2;
+        	}
+        	#luz {
+        		position: absolute;
+        		top: -20px;
+        		left: 180px;
+        		opacity: 0;
+        		animation-name: fadeIn;
+        		animation-delay: 15s;
+				animation-duration: 8s;
+				animation-timing-function: ease-in;
+				animation-fill-mode: forwards; 
+        	}
+        	#adulto {
+        		position: absolute;
+        		top: 120px;
+        		left: 390px;
+        		opacity: 0;
+        		animation-name: fadeIn;
+        		animation-delay: 10s;
+				animation-duration: 12s;
+				animation-timing-function: ease-in;
+  				animation-direction: alternate;
+  				animation-iteration-count: 2;
+        	}
+        	#ambrosio {
+        		position: absolute;
+        		top: 300px;
+        		left: 320px;
+        		opacity: 0;
+        		animation-name: fadeIn;
+        		animation-delay: 33s;
+				animation-duration: 5s;
+				animation-timing-function: ease-in;
+  				animation-direction: alternate;
+  				animation-iteration-count: 2;
+        	}
+        	#bebado {
+        		position: absolute;
+        		top: 150px;
+        		left: 300px;
+        		opacity: 0;
+        		animation-name: fadeIn;
+        		animation-delay: 40s;
+				animation-duration: 7s;
+				animation-timing-function: ease-in;
+  				animation-direction: alternate;
+  				animation-iteration-count: 2;
+        	}
+        	#fundoTexto {
+        		position: absolute;
+        		opacity: 0;
+        		top: -8px;
+        		left: -9px;
+        		animation-name: fadeIn;
+        		animation-delay: 8s;
+				animation-duration: 4s;
+				animation-timing-function: ease-in;
+				animation-fill-mode: forwards; /*Para manter o estado final da animação (a imagem de fundo opaca)*/
+			}
+        	@keyframes fadeIn {
+				0% {
+					opacity: 0; 
+				}
+			    50% {
+			    	opacity: 0.5;
+			    }
+			    100% {
+			    	opacity: 1;
+			    }
+			}
+			body {
+	 			background-image: url("assets/preto.png");
+	 			background-repeat: no-repeat;
+	 			position: fixed;
+	 		}
+		</style>
+	</head>
+
+ 	<body>
+		<p id="titulo">CAPÍTULO V</p>
+		<p id="subtitulo">Pós-guerra</p>
+		
+		<!-- Fundo cinzento -->
+		<img id="fundoTexto" src="assets/introBackground.png" alt="fundoTexto"/>
+
+		<img id="luz" src="assets/luz.png" alt="luz"/>
+		<img id="adulto" src="assets/adulto.png" alt="adulto"/>
+		<img id="ambrosio" src="assets/ambrosiomorto.png" alt="ambrosio"/>
+		<img id="bebado" src="assets/bebadoclose.png" alt="bebado"/>
+		
+		
+		<img id="box" src="assets/box1.png" alt="box"/>
+		<p id="fala"></p>
+
+        <input type="image" id="skip" src="assets/skip.png"></input>
+
+		<canvas id="myCanvas" width=900 height="667">
+			Your browser does not support HTML5 canvas.
+		</canvas>
+	</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Memento Mori</title>
+		<meta charset="utf-8">
+		
+		<script type="text/javascript" src="code/nivel3.js" defer="true"></script>
+		<script type="text/javascript" src="code/Viewport.js" defer="true"></script>
+		<script type="text/javascript" src="code/Entity.js" defer="true"></script>
+		<script type="text/javascript" src="code/PlayerPhase1&2.js" defer="true"></script>
+		<script type="text/javascript" src="code/CollisionBox.js" defer="true"></script>
+		<script type="text/javascript" src="code/AnimSheet.js" defer="true"></script>
+		<script type="text/javascript" src="code/SpriteImage.js" defer="true"></script>
+
+		<style>
+
+			#heart1{
+				position: absolute;
+				top: 30px;
+				left: 40px;
+			}
+			#heart2{
+				position: absolute;
+				top: 30px;
+				left: 65px;
+			}
+			#heart3{
+				position: absolute;
+				top: 30px;
+				left: 90px;
+			}
+			img{
+	 			position: fixed;	
+	 		}
+		</style>
+
+	</head>
+
+	<body>
+		<img id="heart1" src="assets/heart.png"/>
+		<img id="heart2" src="assets/heart.png"/>
+		<img id="heart3" src="assets/heart.png"/>
+		
+		<audio id="audio" src="assets/wood.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+		</audio>
+	</body>
+	
+	<div id="wrapper">
+		<canvas id="canvas" width=880 height="600">
+			Your browser does not support HTML5 canvas.
+		</canvas>
+
+		<canvas id="layoutCanvas" width="0" height="0" style="display: none"></canvas>
+		<canvas id="layoutHitCanvas" width="0" height="0" style="display: none"></canvas>
+		<canvas id="entityCanvas" width="0" height="0" style="display: none"></canvas>
+		<canvas id="entityHitCanvas" width="0" height="0" style="display: none"></canvas>
+	</div>
+</html>

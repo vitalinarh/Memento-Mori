@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <title>Jogo memória</title>
+
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            @font-face {
+                font-family: myFirstFont;
+                src: url("assets/cartas/font.ttf");
+            }
+            input {
+                background-color: Transparent;
+                background-repeat: no-repeat;
+                border: none;
+                outline: 0;
+                cursor: pointer;
+                overflow: hidden;  
+                right: 15px;
+                position: absolute;
+            }
+            body {
+				position: fixed;
+                background-image: url("assets/introBackground.png");
+                background-repeat: no-repeat;
+            }
+            .painel {
+                position: absolute;
+                top:5px;
+                left:290px;
+                font-family: myFirstFont;
+                font-size: 55px;
+                font-weight: bold;
+                color: black;
+                border: 0px;
+                border-radius: 3px;
+                padding: 5px;
+                margin-bottom: 20px;
+            }
+            .jogo {
+                position: relative;
+                top:79px;
+                left:170px;
+                width: 500px;
+                height: 500px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .carta {
+                width: calc(25% - 10px);
+                height: calc(33.333% - 10px);
+                margin: 5px;
+                position: relative;
+                transform: scale(1);
+                transform-style: preserve-3d;
+                transition: transform .5s;
+            }
+            .carta:active {
+                transform: scale(0.97);
+                transition: transform .2s;
+            }
+            .carta.virar {
+                transform: rotateY(180deg);
+            }
+            .frente, .verso {
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                position: absolute;
+                border-radius: 5px;
+                background: #404963;
+                backface-visibility: hidden;
+            }
+            .frente {
+                transform: rotateY(180deg);
+            }
+            #caixa {
+                position: absolute;
+                top: 40px;
+                height: 635px;
+                width: 650px;
+                left: 100px;
+            }
+            #desistir {
+                position: absolute;
+                top: 15px;
+                left: 700px;
+            }
+            #home {
+                position: absolute;
+                top: 10px;
+                left: 20px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <img id="caixa" src="assets/caixa.png" alt=caixa"/>
+        
+        <section class="painel">
+            <span class="movimentos">0</span> Movimento(s)
+        </section>
+
+        <section class="jogo">
+            <div class="carta" data-framework="mina">
+                <img class="frente" src="assets/cartas/mina.png" alt="mina" />
+                <img class="verso" src="assets/cartas/logotipo.png" alt="logotipo" />
+            </div>
+            
+            <div class="carta" data-framework="mina">
+                <img class="frente" src="assets/cartas/mina.png" alt="mina" />
+                <img class="verso" src="assets/cartas/logotipo.png" alt="logotipo" />
+            </div>
+
+            <div class="carta" data-framework="irmao">
+                <img class="frente" src="assets/cartas/irmao.png" alt="irmao" />
+                <img class="verso" src="assets/cartas/logotipo.png" alt="logotipo" />
+            </div>
+            
+            <div class="carta" data-framework="irmao">
+                <img class="frente" src="assets/cartas/irmao.png" alt="irmao" />
+                <img class="verso" src="assets/cartas/logotipo.png" alt="logotipo" />
+            </div>
+
+            <div class="carta" data-framework="carta">
+                <img class="frente" src="assets/cartas/carta.png" alt="carta" />
+                <img class="verso" src="assets/cartas/logotipo.png" alt="logotipo" />
+            </div>
+          
+            <div class="carta" data-framework="carta">
+                <img class="frente" src="assets/cartas/carta.png" alt="carta" />
+                <img class="verso" src="assets/cartas/logotipo.png" alt="logotipo" />
+            </div>
+
+            <div class="carta" data-framework="limbo">
+                <img class="frente" src="assets/cartas/limbo.png" alt="limbo" />
+                <img class="verso" src="assets/cartas/logotipo.png" alt="logotipo" />
+            </div>
+            
+            <div class="carta" data-framework="limbo">
+                <img class="frente" src="assets/cartas/limbo.png" alt="limbo" />
+                <img class="verso" src="assets/cartas/logotipo.png" alt="logotipo" />
+            </div>
+
+            <div class="carta" data-framework="garrafa">
+                <img class="frente" src="assets/cartas/garrafa.png" alt="garrafa" />
+                <img class="verso" src="assets/cartas/logotipo.png" alt="logotipo" />
+            </div>
+            
+            <div class="carta" data-framework="garrafa">
+                <img class="frente" src="assets/cartas/garrafa.png" alt="garrafa" />
+                <img class="verso" src="assets/cartas/logotipo.png" alt="logotipo" />
+            </div>
+
+            <div class="carta" data-framework="alvo">
+                <img class="frente" src="assets/cartas/alvo.png" alt="alvo" />
+                <img class="verso" src="assets/cartas/logotipo.png" alt="logotipo" />
+            </div>
+            
+            <div class="carta" data-framework="alvo">
+                <img class="frente" src="assets/cartas/alvo.png" alt="alvo" />
+                <img class="verso" src="assets/cartas/logotipo.png" alt="logotipo" />
+            </div>
+        </section>
+
+        <nav> 
+            <input type="image" id="home" src="assets/home.png"></input>
+            <input type="image" id="desistir" src="assets/desistir.png"></input>
+        </nav>
+
+        <script src="js/memoria.js"></script>
+        
+	  	<canvas id="myCanvas" width=900 height="667">
+            Your browser does not support HTML5 canvas.
+        </canvas>
+  </body>
+</html>

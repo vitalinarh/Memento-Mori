@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="js/options.js"></script>
+
+		<style>
+			body {
+	 			background-image: url("assets/background.png");
+	 			background-repeat: no-repeat;
+	 			position: fixed;
+	 		}
+	 		#musica, #som {
+	 			position: absolute;
+	 			margin-left: 310px;
+	 		}
+	 		#opcoes {
+	 			position: absolute;
+	 			margin-top: 90px;
+	 			margin-left: 285px;
+	 		}
+	 		#musica1, #som1 {
+	 			margin-left: 550px;
+	 		}
+	 		#musica, #musica1 {
+	 			top:250px;
+	 		}
+	 		#som, #som1 {
+	 			top:330px;
+	 		}
+	 		#menos, #menos1 {
+	 			margin-left: 390px;
+	 		}
+	 		#mais, #mais1 {
+	 			margin-left: 480px;
+	 		}
+	 		#menos {
+	 			top: 268px;
+	 		}
+	 		#menos1 {
+	 			top: 345px;
+	 		}
+	 		#mais {
+	 			top: 260px;
+	 		}
+	 		#mais1 {
+	 			top: 335px;
+	 		}
+	 		#voltar {
+	 			margin-top: 420px;
+	 			margin-left: 400px;
+	 		}
+	 		#fundo {
+	 			margin-top: 45px;
+	 			margin-left: 215px;
+	 		}
+	 		input {
+	 			background-color: Transparent;
+			    background-repeat: no-repeat;
+			    border: none;
+			    outline: 0;
+			    overflow: hidden;  
+				position: absolute;
+	 		}
+	 	</style>	 
+	</head>
+
+	<body>
+		<nav>
+			<input type="image" id="musica1" src="assets/musica1.png"></input>
+			<input type="image" id="som1" src="assets/som1.png"></input>
+			<input type="image" id="voltar" src="assets/voltar.png"></input>
+			<input type="image" id="mais" src="assets/mais.png"></input>
+			<input type="image" id="menos" src="assets/menos.png"></input>
+			<input type="image" id="mais1" src="assets/mais.png"></input>
+			<input type="image" id="menos1" src="assets/menos.png"></input>
+		</nav>
+
+		<audio loop>
+			<source src="audio/mainMenu.mp3" type = "audio/mpeg">
+		</audio>
+
+		<img id="opcoes" src="assets/opcoes.png" alt="opcoes"/>
+		<img id="musica" src="assets/musica.png"/>
+		<img id="som" src="assets/som.png"/>
+		<img id="fundo" src="assets/fundoOpcoes.png" alt="fundo"/>
+
+		
+		<canvas id="myCanvas" width=900 height="667">
+			Your browser does not support HTML5 canvas.
+		</canvas>
+	</body>
+</html>

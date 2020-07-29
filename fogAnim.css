@@ -1,0 +1,84 @@
+audio { 
+   display:none;
+}
+
+.image1 {
+
+	visibility: hidden;
+	animation-name: first;
+	animation-delay: 18s;
+	animation-duration: 15s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+
+	position: absolute;
+  	left: 233px;
+  	top: -60px;
+}
+
+@keyframes first {
+	0% {visibility: visible; opacity: 0.1;}
+	10%{opacity:  0.1;}
+	20% {opacity: 0.3;}
+	30%{opacity: 0.5;}
+	40% {opacity:  0.7;}
+	50%{opacity:  1;}
+	60% {opacity: 0.8;}
+	80% {opacity: 0.6;}
+	90% {opacity: 0.5;}
+	100% {opacity:  0.3;}
+}
+
+.image2 {
+
+	visibility: hidden;
+	animation-name: second;
+	animation-delay: 18s;
+	animation-duration: 15s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+
+	position: absolute;
+  	left: -10px;
+  	top: 0px;
+}
+
+@keyframes second {
+	0% {visibility: visible; opacity: 0.3;}
+	10%{opacity:  0.5;}
+	20% {opacity: 0.7;}
+	30%{opacity: 0.8;}
+	40% {opacity:  1;}
+	50%{opacity:  0.8;}
+	60% {opacity: 0.6;}
+	80% {opacity: 0.4;}
+	90% {opacity: 0.2;}
+	100% {opacity:  0.5;}
+}
+
+.image3 {
+
+	visibility: hidden;
+	animation-name: third;
+	animation-delay: 18s;
+	animation-duration: 15s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+
+	position: absolute;
+  	left: -10px;
+  	top: -160px;
+}
+
+@keyframes third {
+	0% {visibility: visible; opacity: 0.1;}
+	10%{opacity:  0.1;}
+	20% {opacity: 0.3;}
+	30%{opacity: 0.5;}
+	40% {opacity:  0.7;}
+	50%{opacity:  1;}
+	60% {opacity: 0.8;}
+	80% {opacity: 0.6;}
+	90% {opacity: 0.5;}
+	100% {opacity:  0.3;}
+}

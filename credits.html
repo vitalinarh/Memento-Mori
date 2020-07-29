@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="js/credits.js"></script>
+
+		<style>
+			@font-face {
+				font-family: myFirstFont;
+				src: url("assets/font3.ttf");
+			}
+			p {
+				position: absolute;
+				font-family: myFirstFont;
+				color: black;
+				font-size: 45px;
+				width: 650px;
+				font-weight: bold;
+			}
+			body {
+	 			background-image: url("assets/background.png");
+	 			background-repeat: no-repeat;
+	 			position: fixed;
+	 		}
+	 		#nome1 {
+	 			margin-top: -330px;
+	 			margin-left: 365px;
+	 		}
+	 		#nome2 {
+	 			margin-top: -280px;
+	 			margin-left: 350px;
+	 		}
+	 		#nome3 {
+	 			margin-top: -230px;
+	 			margin-left: 310px;
+	 		}
+	 		#creditos {
+	 			position: absolute;
+	 			margin-top: 90px;
+	 			margin-left: 245px;
+	 		}
+
+	 		#voltar {
+	 			margin-top: 420px;
+	 			margin-left: 400px;
+	 		}
+	 		#fundo {
+	 			margin-top: 45px;
+	 			margin-left: 215px;
+	 		}
+	 		input {
+	 			background-color: Transparent;
+			    background-repeat: no-repeat;
+			    border: none;
+			    outline: 0;
+			    overflow: hidden;  
+				position: absolute;
+	 		}
+	 	</style>	 
+	</head>
+
+	<body>
+		<nav>
+			<input type="image" id="voltar" src="assets/voltar.png"></input>
+		</nav>
+
+		<audio loop>
+			<source src="audio/mainMenu.mp3" type = "audio/mpeg">
+		</audio>
+
+		<img id="creditos" src="assets/creditos.png" alt="opcoes"/>
+		<img id="fundo" src="assets/fundoOpcoes.png" alt="fundo"/>
+
+		<p id="nome1">Eva Santos</p>
+		<p id="nome2">Inês Tabanez</p>
+		<p id="nome3">Vitalina Holubenko</p>
+
+		<canvas id="myCanvas" width=900 height="667">
+			Your browser does not support HTML5 canvas.
+		</canvas>
+	</body>
+</html>

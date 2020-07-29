@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="js/escolha4.js"></script>
+
+		<style>
+			@font-face {
+				font-family: myFirstFont;
+				src: url("assets/font3.ttf");
+			}
+			#fala {
+				position: absolute;
+				font-family: myFirstFont;
+				color: white;
+				font-size: 36px;
+				top: 425px;
+				left: 125px;
+				width: 650px;
+			}
+			#escolha {
+				position: absolute;
+				color: black;
+				font-size: 60px;
+				font-weight: bold;
+        		animation-name: piscar;
+				animation-duration: 1s;
+				animation-iteration-count: infinite;
+				top: -70px;
+				left: 320px;
+			}
+			#opcao1, #opcao2, #opcao3 {
+				position: absolute;
+				visibility: hidden;
+				font-weight: bold;
+				left: 125px;
+				font-size: 32px;
+			}
+			#opcao1 {
+				top: 420px;
+			}
+			#opcao2 {
+				top: 450px;
+			}
+			#opcao3 {
+				top: 480px;
+			}
+			#box {
+				position: absolute;
+				top: 428px;
+				left: 80px;
+				opacity: 0;
+        		animation-name: fadeIn;
+        		animation-delay: 4s;
+				animation-duration: 2s;
+				animation-timing-function: ease-in;
+				animation-fill-mode: forwards; /*Para manter o estado final da animação (a imagem de fundo opaca)*/
+			}
+			p {
+				position: absolute;
+				font-family: myFirstFont;
+				color: white;
+			}
+        	#preto {
+        		position: absolute;
+        		left: -28px;
+        		top: -9px;
+        		opacity: 1;
+        		animation-name: fadeOut;
+				animation-duration: 4s;
+				animation-timing-function: ease-in;
+				animation-fill-mode: forwards;
+        	}
+			@keyframes piscar {
+				0% {
+					color: white;
+				}
+				50% {
+					color: black;
+				}
+				100% {
+					color: white;
+				}
+			}
+        	@keyframes fadeIn {
+				0% {
+					opacity: 0; 
+				}
+			    50% {
+			    	opacity: 0.5;
+			    }
+			    100% {
+			    	opacity: 1;
+			    }
+			}
+        	@keyframes fadeOut {
+				0% {
+					opacity: 1; 
+				}
+			    50% {
+			    	opacity: 0.5;
+			    }
+			    100% {
+			    	opacity: 0;
+			    }
+			}
+			body {
+	 			background-image: url("assets/escolha4.png");
+	 			background-repeat: no-repeat;
+	 			position: fixed;
+	 		}
+		</style>
+	</head>
+
+	<body>		
+		<img id="box" src="assets/box1.png" alt="box"/>
+		<p id="fala"></p>
+		<p id="opcao1">Tentaste salvar o amigo e arriscaste a sua própria vida.</p>
+		<p id="opcao2">Não arriscaste e fugiste para te salvares a ti mesmo.</p>
+		<p id="opcao3">Acabaste com o sofrimento do teu amigo.</p>		
+		<p id="escolha">Escolha #4</p>
+
+		<img id="preto" src="assets/preto.png" alt="preto"/>
+
+		<canvas id="myCanvas" width=900 height="667">
+			Your browser does not support HTML5 canvas.
+		</canvas>
+	</body>
+</html>

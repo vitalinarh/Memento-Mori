@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html >
+    <head>
+        <meta charset="UTF-8">
+        
+        <style>
+            @font-face {
+				font-family: myFirstFont;
+				src: url("assets/font3.ttf");
+			}
+            body{
+                background-image: url("assets/quizBackground.png");
+                background-repeat: no-repeat;
+				position: fixed;
+                font-size: 23px;
+                font-family: myFirstFont;
+                color: #333;
+            }
+            .pergunta{
+                position: relative;
+                font-weight: 600;
+                top:90px;
+                right:10px;
+                text-align:center;
+            }
+            .respostas{
+                position: relative;
+                margin-bottom: 20px;
+                font-size: 17px;
+                top:90px;
+                right:10px;
+                text-align: center;
+            }
+            #fundo{
+                position: relative;
+            }
+            #submeter{
+                position: relative;
+                top:100px;
+                left:380px;
+                font-family: myFirstFont;
+                font-size: 30px;
+                background-color:#404963;
+                color: #fff;
+                border: 0px;
+                border-radius: 4px;
+                padding: 12px; 
+            }
+            #submeter:hover{
+                background-color: #60687e;
+            }
+            #resultados{
+                position: relative;
+                text-align: center;
+                top:250px;
+                
+                font-weight: 700;
+                font-size: 30px;
+            }
+            #desistir {
+                 position: absolute;
+                 top: 15px;
+                 left: 700px;
+            }
+            #home {
+                 position: absolute;
+                 top: 10px;
+                 left: 20px;
+            }
+        </style>
+    </head>
+    <body>
+       
+        <div id="quiz"></div>
+        <button id="submeter">Submeter</button>
+        <div id="resultados"></div>
+        
+        <nav> 
+             <input type="image" id="home" src="assets/home.png"></input>
+             <input type="image" id="desistir" src="assets/desistir.png"></input>
+        </nav>
+       
+        <canvas id="myCanvas" width=900 height="667">
+            Your browser does not support HTML5 canvas.
+        </canvas>
+
+        <script src="js/quiz.js"></script>
+    </body>
+</html>

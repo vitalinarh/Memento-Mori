@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="js/mainMenu.js"></script>
+
+		<style>
+			body {
+	 			background-image: url("assets/background.png");
+	 			background-repeat: no-repeat;
+	 			position: fixed;
+	 		}
+	 		input {
+	 			background-color: Transparent;
+			    background-repeat: no-repeat;
+			    border: none;
+			    outline: 0;
+			    cursor:pointer;
+			    overflow: hidden;  
+				right: 15px;
+				position: absolute;
+	 		}
+	 		#jogar {
+	 			top: 150px;
+	 		}
+	 		#opcoes {
+	 			top: 250px;
+	 		}
+	 		#creditos {
+	 			top: 350px;
+	 		}
+	 		#sair {
+	 			top: 450px;
+	 		}
+	 		#ajuda {
+	 			top: 5px;
+	 			left: 10px;
+	 		}
+	 	</style>
+	</head>
+
+	<body>
+		<canvas id="myCanvas" width=900 height="667">
+			Your browser does not support HTML5 canvas.
+		</canvas>
+		<nav> 
+			<input type="image" id="jogar" src="assets/jogar.png"></input>
+			<input type="image" id="opcoes" src="assets/opcoes.png"></input>
+			<input type="image" id="creditos" src="assets/creditos.png"></input>
+			<input type="image" id="sair" src="assets/sair.png"></input>
+			<input type="image" id="ajuda" src="assets/ajuda.png"></input>
+		</nav>
+	</body>
+</html>

@@ -1,0 +1,123 @@
+<!-- Única solução que funcionou para retirar espaços entre as peças -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="js/puzzle.js"></script>
+	  
+		<style>
+			@font-face {
+				font-family: myFirstFont;
+				src: url("assets/font.ttf");
+			}
+			p {
+				position: absolute;
+				font-family: myFirstFont;
+				color: black;
+				font-weight: bold;
+				font-size: 55px;
+			}
+			#movimentos {
+				top:-68px;
+				left:300px;
+			}
+			input {
+				background-color: Transparent;
+				background-repeat: no-repeat;
+				border: none;
+				outline: 0;
+				cursor:pointer;
+				overflow: hidden;  
+				right: 15px;
+				position: absolute;
+			}
+			body {
+				background-image: url("assets/introBackground.png");
+				background-repeat: no-repeat;
+				position: fixed;
+				opacity: 0;
+				animation-name: fadeIn;
+				animation-delay: 0s;
+				animation-duration: 10s;
+				animation-timing-function: ease-in;
+				animation-fill-mode: forwards; /*Para manter o estado final da animação (a imagem de fundo opaca)*/
+			}
+			table {
+				position: absolute;
+				top: 51px;
+				left: 151px;
+				border-collapse: collapse; 
+			}
+			table td, table th {
+				padding: 0;
+				visibility: hidden;
+			}
+			#caixa {
+				position: absolute;
+				top: 6px;
+				height: 665px;
+				width: 670px;
+				left: 80px;
+			}
+			#desistir {
+				position: absolute;
+				top: 15px;
+				left: 700px;
+			}
+			#home {
+				position: absolute;
+				top: 10px;
+				left: 20px;
+			}
+			@keyframes fadeIn {
+				0% {
+				   opacity: 0; 
+				}
+				 50% {
+				   opacity: 0.5;
+				 }
+				 100% {
+				   opacity: 1;
+				 }
+			}
+	  </style>
+   </head>
+
+   <body>
+		<img id="caixa" src="assets/caixa.png" alt=caixa"/>
+
+		<!-- Definir tabuleiro do puzzle e todas as suas peças -->
+		<table>
+			<!-- Linha 1 -->
+			<tr>
+				<td><image id="tile11" class="tile1" src="assets/puzzle/peca1.png" width="172px" height="172px" onclick="clickTiles(1,1)"></td>
+				<td><image id="tile12" class="tile2" src="assets/puzzle/peca2.png" width="172px" height="172px" onclick="clickTiles(1,2)"></td>
+				<td><image id="tile13" class="tile3" src="assets/puzzle/peca3.png" width="172px" height="172px" onclick="clickTiles(1,3)"></td>
+			</tr>
+			<!-- Linha 2 -->
+			<tr>
+				<td><image id="tile21" class="tile4" src="assets/puzzle/peca4.png" width="172px" height="172px" onclick="clickTiles(2,1)"></td>
+				<td><image id="tile22" class="tile5" src="assets/puzzle/peca5.png" width="172px" height="172px" onclick="clickTiles(2,2)"></td>
+				<td><image id="tile23" class="tile6" src="assets/puzzle/peca6.png" width="172px" height="172px" onclick="clickTiles(2,3)"></td>
+			</tr>
+			<!-- Linha 3 -->
+			<tr>
+				<td><image id="tile31" class="tile7" src="assets/puzzle/peca7.png" width="172px" height="172px" onclick="clickTiles(3,1)"></td>
+				<td><image id="tile32" class="tile8" src="assets/puzzle/peca8.png" width="172px" height="172px" onclick="clickTiles(3,2)"></td>
+				<td><image id="tile33" class="tile9" src="assets/introBackground.png" width="172px" height="172px" onclick="clickTiles(3,3)"></td>
+			</tr>
+	  	</table>
+
+	  	<nav> 
+			<input type="image" id="home" src="assets/home.png"></input>
+			<input type="image" id="desistir" src="assets/desistir.png"></input>
+	  	</nav>
+
+	  	<p id="movimentos"></p>
+	  
+	  	<canvas id="myCanvas" width=900 height="667">
+			Your browser does not support HTML5 canvas.
+	  	</canvas>
+    </body>
+</html>

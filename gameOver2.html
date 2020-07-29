@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="js/gameOver2.js"></script>
+		
+		<style>
+			@font-face {
+				font-family: myFirstFont;
+				src: url("assets/font3.ttf");
+			}
+			p {
+				position: absolute;
+				font-family: myFirstFont;
+				color: white;
+				font-size: 140px;
+				top: -100px;
+				left: 135px;
+       			animation-name: piscar;
+				animation-duration: 4s;
+				animation-iteration-count: infinite;
+			}
+			#replay {
+				z-index: 2;
+				position: absolute;
+				bottom: 100px;
+				right: 40px;
+			}
+			#home {
+				z-index: 3;
+				position: absolute;
+				bottom: 100px;
+				right: 120px;
+			}
+			#campa {
+				position: absolute;
+				top: 220px;
+				left: 300px;
+			}
+        	#preto {
+        		position: absolute;
+        		top: -9px;
+        		left:-9px;
+        		opacity: 1;
+        		animation-name: fadeIn;
+        		animation-delay: 0s;
+				animation-duration: 8s;
+				animation-timing-function: ease-in;
+				animation-fill-mode: forwards; /*Para manter o estado final da animação (a imagem de fundo opaca)*/
+        	}
+        	@keyframes fadeIn {
+				0% {
+					opacity: 1; 
+				}
+			    50% {
+			    	opacity: 0.5;
+			    }
+			    100% {
+			    	opacity: 0;
+			    }
+			}
+			@keyframes piscar {
+				0% {
+					color: #ff3333;
+				}
+				20% {
+					color: #47476b;
+				}
+				40% {
+					color: white;
+				}
+				60% {
+					color: #ff3333;
+				}
+				80% {
+					color: #47476b;
+				}
+				100% {
+					color: white;
+				}
+			}
+			body {
+	 			background-image: url("assets/preto.png");
+	 			background-repeat: no-repeat;
+	 			position: fixed;
+	 		}
+	 	</style>
+	</head>
+	 
+	<body>
+		<p id="over">GAME OVER</p>
+
+		<img id="replay" src="assets/replay.png" alt=replay"/>
+		<img id="home" src="assets/home2.png" alt=home"/>
+		
+		<img id="campa" src="assets/campa.png" alt=campa"/>
+		<img id="preto" src="assets/preto.png" alt=preto"/>
+		
+		<canvas id="myCanvas" width=900 height="667">
+			Your browser does not support HTML5 canvas.
+		</canvas>
+ 	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="js/intro.js"></script>
+		
+		<style>
+			body {
+	 			background-image: url("assets/introBackground.png");
+	 			background-repeat: no-repeat;
+	 			position: fixed;
+	 		}
+	 		#logo {
+	 			position: absolute;
+	 			top: -80px;
+	 			right: 225px;
+	 		}
+	 		#titulo {
+	 			position: absolute;
+	 			margin-top: 320px;
+	 			margin-left: 325px;
+	 		}
+	 		#pressione, #pressione1 {
+	 			position: absolute;
+	 			margin-top: 450px;
+	 			margin-left: 145px;
+	 		}
+	 		#pressione1 {
+	 			visibility: hidden;
+	 		}
+	 	</style>
+	</head>
+	 
+	<body>
+		<img id="pressione" src="assets/pressione.png" alt="pressione"/>
+		<img id="pressione1" src="assets/pressione1.png" alt="pressione1"/>
+
+		<img id="titulo" src="assets/titulo.png" alt="titulo"/>
+		<canvas id="myCanvas" width=900 height="667">
+			Your browser does not support HTML5 canvas.
+		</canvas>
+		<img id="logo" src="assets/logoIntro.png" alt="logo"/>
+ 	</body>
+</html>

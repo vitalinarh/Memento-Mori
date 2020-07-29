@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="js/limbo.js"></script>
+		<link rel="stylesheet" type="text/css" href="fogAnim.css">
+
+		<style>
+			@font-face {
+				font-family: myFirstFont;
+				src: url("assets/font3.ttf");
+			}
+			p {
+				position: absolute;
+				font-family: myFirstFont;
+				color: white;
+				font-size: 36px;
+				top: 425px;
+				left: 125px;
+				width: 650px;
+			}
+			#box {
+				position: absolute;
+				top: 428px;
+				left: 80px;
+			}
+        	#fundoLimbo {
+        		position: relative;
+        		top: -8px;
+        		left: -8px;
+        		opacity: 0;
+        		animation-name: fadeIn;
+        		animation-delay: 15s;
+				animation-duration: 8s;
+				animation-timing-function: ease-in;
+				animation-fill-mode: forwards; /*Para manter o estado final da animação (a imagem de fundo opaca)*/
+        	}
+        	#skip {
+                position: absolute;
+                top: 10px;
+                left: 800px;
+  				z-index: 2;
+            }
+        	#protagonista {
+        		position: absolute;
+        		top: 180px;
+        		left: 500px;
+        		opacity: 0;
+        		animation-name: fadeIn;
+        		animation-delay: 15s;
+				animation-duration: 8s;
+				animation-timing-function: ease-in;
+				animation-fill-mode: forwards; 
+        	}
+        	#bonecoLimbo {
+	       		position: absolute;
+	    		top: 140px;
+	    		left: 280px;
+	    		opacity: 0;
+	    		animation-name: fadeIn;
+	    		animation-delay: 15s;
+				animation-duration: 8s;
+				animation-timing-function: ease-in;
+				animation-fill-mode: forwards; 
+        	}
+        	#preto {
+        		position: absolute;
+        		bottom: 683px;
+        		left: -9px;
+        		opacity: 0;
+        		animation-name: fadeIn;
+        		animation-delay: 70s;
+				animation-duration: 4s;
+				animation-timing-function: ease-in;
+				animation-fill-mode: forwards; /*Para manter o estado final da animação (a imagem de fundo opaca)*/
+        	}
+        	@keyframes fadeIn {
+				0% {
+					opacity: 0; 
+				}
+			    50% {
+			    	opacity: 0.5;
+			    }
+			    100% {
+			    	opacity: 1;
+			    }
+			}
+            input {
+                background-color: Transparent;
+                background-repeat: no-repeat;
+                border: none;
+                outline: 0;
+                overflow: hidden;  
+                position: absolute;
+            }
+			body {
+				background-image: url("assets/introBackground.png");
+				background-repeat: no-repeat;
+				position: fixed;
+			}
+		</style>
+	</head>
+
+	<body>	
+		<!-- Fundo inicial -->
+		<img id="fundoLimbo" src="assets/limboBackground.png" alt="fundoLimbo"/>
+
+		<!-- Imagens do fumo no fundo do limbo. Formatação no ficheiro fogAnim.css, utilizado também numa das plataformas. -->
+		<img class="image1" src="assets/fogg.png" alt="HTML5 Icon" width="900" height="600">
+		<img class="image2" src="assets/fog2.png" alt="HTML5 Icon" width="900" height="600">
+		<img class="image3" src="assets/fog2.png" alt="HTML5 Icon" width="900" height="600">		
+		
+		<img id="protagonista" src="assets/adulto.png" alt="protagonista"/>
+		<img id="bonecoLimbo" src="assets/bonecoLimbo.png" alt="bonecoLimbo"/>
+		<img id="box" src="assets/box1.png" alt="box"/>
+
+		<p id="fala"></p>
+
+		<input type="image" id="skip" src="assets/skip.png"></input>
+
+		<!-- Fundo final (preto) -->
+		<img id="preto" src="assets/preto.png" alt="preto"/>
+
+		<canvas id="myCanvas" width=900 height="667">
+			Your browser does not support HTML5 canvas.
+		</canvas>
+	</body>
+</html>

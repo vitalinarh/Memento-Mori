@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		
+		<script type="text/javascript" src="code/nivel1.js" defer="true"></script>
+		<script type="text/javascript" src="code/Viewport.js" defer="true"></script>
+		<script type="text/javascript" src="code/Entity.js" defer="true"></script>
+		<script type="text/javascript" src="code/PlayerPhase1&2.js" defer="true"></script>
+		<script type="text/javascript" src="code/CollisionBox.js" defer="true"></script>
+		<script type="text/javascript" src="code/AnimSheet.js" defer="true"></script>
+		<script type="text/javascript" src="code/SpriteImage.js" defer="true"></script>
+
+		<style>
+			@font-face {
+				font-family: myFirstFont;
+				src: url("assets/font3.ttf");
+			}
+			p {
+				position: absolute;
+				font-family: myFirstFont;
+				color: black;
+				font-weight: bold;
+				font-size: 32.5px;
+			}
+			#doces {
+				top: -17px;
+				left: 570px;
+			}
+			img {
+	 			position: fixed;	
+	 		}
+		</style>
+
+	</head>
+
+	<body>
+		<p id="doces"></p>
+
+		<audio id="audio" src="assets/candy.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+		</audio>
+	</body>
+	
+	<div id="wrapper">
+		<canvas id="canvas" width=880 height="600">
+			Your browser does not support HTML5 canvas.
+		</canvas>
+
+		<canvas id="layoutCanvas" width="0" height="0" style="display: none"></canvas>
+		<canvas id="layoutHitCanvas" width="0" height="0" style="display: none"></canvas>
+		<canvas id="entityCanvas" width="0" height="0" style="display: none"></canvas>
+		<canvas id="entityHitCanvas" width="0" height="0" style="display: none"></canvas>
+	</div>
+</html>

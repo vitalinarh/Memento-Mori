@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Memento Morri</title>
+		<meta charset="utf-8">
+		
+		<script type="text/javascript" src="code/nivel5.js" defer="true"></script>
+		<script type="text/javascript" src="code/Viewport.js" defer="true"></script>
+		<script type="text/javascript" src="code/Entity.js" defer="true"></script>
+		<script type="text/javascript" src="code/PlayerPhase1&2.js" defer="true"></script>
+		<script type="text/javascript" src="code/CollisionBox.js" defer="true"></script>
+		<script type="text/javascript" src="code/AnimSheet.js" defer="true"></script>
+		<script type="text/javascript" src="code/SpriteImage.js" defer="true"></script>
+		<script type="text/javascript" src="code/Enemy.js" defer="true"></script>
+
+		<style>
+			img{
+	 			position: fixed;	
+	 		}
+
+		</style>
+
+	</head>
+
+	<body>
+		<audio id="audio" src="assets/burp.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+		</audio>
+	</body>
+	
+	<div id="wrapper">
+		<canvas id="canvas" width=880 height="600">
+			Your browser does not support HTML5 canvas.
+		</canvas>
+		<canvas id="layoutCanvas" width="0" height="0" style="display: none"></canvas>
+		<canvas id="layoutHitCanvas" width="0" height="0" style="display: none"></canvas>
+		<canvas id="entityCanvas" width="0" height="0" style="display: none"></canvas>
+		<canvas id="entityHitCanvas" width="0" height="0" style="display: none"></canvas>
+	</div>
+</html>
